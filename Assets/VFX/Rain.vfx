@@ -1812,17 +1812,17 @@ VisualEffectResource:
         - m_ExpressionIndex: 47
           m_Value: 2
         - m_ExpressionIndex: 48
-          m_Value: 1000
+          m_Value: 100000
         - m_ExpressionIndex: 49
           m_Value: 0
         - m_ExpressionIndex: 51
           m_Value: 0
         - m_ExpressionIndex: 52
-          m_Value: 1
+          m_Value: 10
         - m_ExpressionIndex: 53
-          m_Value: 1
+          m_Value: 10
         - m_ExpressionIndex: 54
-          m_Value: 1
+          m_Value: 10
         - m_ExpressionIndex: 58
           m_Value: 10
         - m_ExpressionIndex: 59
@@ -4201,7 +4201,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614666}
   - {fileID: 8926484042661614670}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661614665}
   m_MasterData:
@@ -4210,7 +4210,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.AABox, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"center":{"x":0.0,"y":0.0,"z":0.0},"size":{"x":1.0,"y":1.0,"z":1.0}}'
+      m_SerializableObject: '{"center":{"x":0.0,"y":0.0,"z":0.0},"size":{"x":10.0,"y":10.0,"z":10.0}}'
     m_Space: 0
   m_Property:
     name: bounds
@@ -4701,7 +4701,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1000
+      m_SerializableObject: 100000
     m_Space: 2147483647
   m_Property:
     name: Rate
