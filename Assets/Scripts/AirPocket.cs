@@ -19,4 +19,14 @@ public class AirPocket : MonoBehaviour
     {
 
     }
+
+    public void SetTemperature(float temperature)
+    {
+        this.temperature = temperature;
+    }
+
+        public void SetSaturation(float saturation)
+    {
+        this.saturation = saturation;
+    }
 }

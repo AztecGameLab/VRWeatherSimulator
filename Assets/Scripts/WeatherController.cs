@@ -7,31 +7,29 @@ public class WeatherController : MonoBehaviour
 {
     public static WeatherController instance;
 
+    [Range(0.0f, 1.0f)]
+    public float Thunderstorm;
+    
+    [Range(0.0f, 1.0f)]
+    public float Windstorm;
+    
+    [Range(0.0f, 1.0f)]
+    public float Fog;
+
     private void Awake()
     {
         instance = this;
     }
 
-    public AirPocket[] airpockets;
+    AirPocket[] airpockets;
 
     void Start()
     {
-        //airpockets = GetComponentsInChildren<AirPocket>();
+        airpockets = GetComponentsInChildren<AirPocket>();
     }
 
     void Update()
     {
-
-    }
-
-
-    void OnDrawGizmos()
-    {
-        foreach (AirPocket airpocket in airpockets)
-        {
-            Gizmos.color = new Color(0.2f, 0.2f, 1, 0.5f);
-            Gizmos.DrawCube(airpocket.transform.position, airpocket.transform.localScale);
-        }
 
     }
 }
