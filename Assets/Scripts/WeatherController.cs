@@ -2,26 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class WeatherController : MonoBehaviour
 {
     public static WeatherController instance;
+    AirPocket[] airpockets;
+
 
     [Range(0.0f, 1.0f)]
-    public float Thunderstorm;
+    public float thunderstorm;
     
     [Range(0.0f, 1.0f)]
-    public float Windstorm;
+    public float windstorm;
     
     [Range(0.0f, 1.0f)]
-    public float Fog;
+    public float fog;
+
+
 
     private void Awake()
     {
         instance = this;
     }
 
-    AirPocket[] airpockets;
 
     void Start()
     {
@@ -30,6 +32,22 @@ public class WeatherController : MonoBehaviour
 
     void Update()
     {
+        print(GetRangeOfTemperatures());
+        windstorm = Mathf.InverseLerp(0, 150, GetRangeOfTemperatures());
+    }
 
+    float GetRangeOfTemperatures() //gets the largest diffrence between airpockets
+    {
+        float minimum = 9999;
+        float maximum = -9999;
+
+        foreach (AirPocket airpocket in airpockets)
+        {
+            if(airpocket.temperature < minimum)
+                minimum = airpocket.temperature;
+            if(airpocket.temperature > maximum)
+                maximum = airpocket.temperature;
+        }
+        return Mathf.Abs(maximum - minimum);
     }
 }
