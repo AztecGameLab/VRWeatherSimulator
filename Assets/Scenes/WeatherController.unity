@@ -511,6 +511,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ae5d5f42b07184db41c831b708c258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Thunderstorm: 0
+  Windstorm: 0
+  Fog: 0
 --- !u!4 &1708568897
 Transform:
   m_ObjectHideFlags: 0
