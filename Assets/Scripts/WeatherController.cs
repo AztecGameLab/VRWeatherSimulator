@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class WeatherController : MonoBehaviour
 {
     public static WeatherController instance;
@@ -11,11 +12,11 @@ public class WeatherController : MonoBehaviour
         instance = this;
     }
 
-    Transform[] airpockets;
+    public AirPocket[] airpockets;
 
     void Start()
     {
-        airpockets = GetComponentsInChildren<Transform>();
+        //airpockets = GetComponentsInChildren<AirPocket>();
     }
 
     void Update()
@@ -23,12 +24,13 @@ public class WeatherController : MonoBehaviour
 
     }
 
-    void OnDrawGizmosSelected()
+
+    void OnDrawGizmos()
     {
-        foreach (Transform airpocket in airpockets)
+        foreach (AirPocket airpocket in airpockets)
         {
             Gizmos.color = new Color(0.2f, 0.2f, 1, 0.5f);
-            Gizmos.DrawCube(airpocket.position, airpocket.localScale);
+            Gizmos.DrawCube(airpocket.transform.position, airpocket.transform.localScale);
         }
 
     }
