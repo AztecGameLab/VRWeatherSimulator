@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class AirPocket : MonoBehaviour
 {
 
@@ -26,13 +25,19 @@ public class AirPocket : MonoBehaviour
     void Update()
     {
         color = temperatureGradient.Evaluate(Mathf.InverseLerp(minTemperature,maxTemperature,temperature));
-        color.a = Mathf.Lerp(0.1f,0.9f, saturation);
+        color.a = Mathf.Lerp(0.2f,0.8f, saturation);
         material.color = color;
+        saturation = Mathf.InverseLerp(-20, 40, temperature);
     }
 
     public void SetTemperature(float temperature)
     {
         this.temperature = temperature;
+    }
+
+    public void SetTemperatureByPercent(float percent)
+    {
+        SetTemperature(Mathf.Lerp(minTemperature, maxTemperature, percent));
     }
 
         public void SetSaturation(float saturation)
