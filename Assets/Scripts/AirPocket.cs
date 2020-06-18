@@ -14,11 +14,17 @@ public class AirPocket : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float saturation = 0.5f;
 
+    [Range(0.0f, 1.0f)]
+    public float clouds;
+
     Material material;
     Color color;
 
+    WeatherController weatherController;
+
     void Start()
     {
+        weatherController = WeatherController.instance;
         material = GetComponentInChildren<Renderer>().material;
     }
 
@@ -27,7 +33,9 @@ public class AirPocket : MonoBehaviour
         color = temperatureGradient.Evaluate(Mathf.InverseLerp(minTemperature,maxTemperature,temperature));
         color.a = Mathf.Lerp(0.2f,0.8f, saturation);
         material.color = color;
-        saturation = Mathf.InverseLerp(-20, 40, temperature);
+        saturation = Mathf.Min(weatherController.waterAvailability,  Mathf.InverseLerp(-20, 40, temperature));
+
+        clouds = Mathf.InverseLerp(40, -20, temperature) * saturation;
     }
 
     public void SetTemperature(float temperature)

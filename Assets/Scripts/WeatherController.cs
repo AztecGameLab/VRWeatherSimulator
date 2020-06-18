@@ -7,6 +7,9 @@ public class WeatherController : MonoBehaviour
     public static WeatherController instance;
     AirPocket[] airpockets;
 
+        [Range(0.0f, 1.0f)]
+    public float waterAvailability; //affects water in air
+
     [Range(0.0f, 1.0f)]
     public float mountains;
 
@@ -49,10 +52,11 @@ public class WeatherController : MonoBehaviour
 
     void Update()
     {
-        wind = Mathf.InverseLerp(0, 150, GetRangeOfTemperatures());
+        wind = (mountains + Mathf.InverseLerp(0, 150, GetRangeOfTemperatures()))/2;
         thunderstorm = (rain + clouds) / 2;
         windDryness = 1 - GetAverageSaturation();
         temperature = GetAverageTemperature();
+        clouds = (airpockets[0].clouds + airpockets[1].clouds) / 2;
     }
 
     float GetRangeOfTemperatures() //gets the largest diffrence between airpockets
@@ -93,5 +97,15 @@ public class WeatherController : MonoBehaviour
         }
 
         return totalTemperature/airpockets.Length;
+    }
+
+    public void SetWaterAvailability(float waterAvailability)
+    {
+        this.waterAvailability = waterAvailability;
+    }
+
+        public void SetMountains(float mountains)
+    {
+        this.mountains = mountains;
     }
 }
