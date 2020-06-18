@@ -174,7 +174,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 558bd74505c895c45a7d4cdcf99483bf, type: 2}
+  - {fileID: 2100000, guid: 35fb02e5f17df084b986c84f54825cc8, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3864,7 +3864,7 @@ ParticleSystem:
     m_EnergyLossOnCollision:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3949,13 +3949,13 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
     - serializedVersion: 3
-      emitter: {fileID: 1400050040}
-      type: 2
+      emitter: {fileID: 0}
+      type: 1
       properties: 0
       emitProbability: 1
     - serializedVersion: 3
-      emitter: {fileID: 0}
-      type: 1
+      emitter: {fileID: 1400050040}
+      type: 2
       properties: 0
       emitProbability: 1
   LightsModule:
@@ -4887,47 +4887,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!28 &74751625
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: LightningNotTouchingGround_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 6666e6bec3f5804151b8febf0000803f6666e6be5d8f5641225c0fbf0000803f0000003f4d9d33415171c9bf0000803ffaa911bf3e0a07418ac275be0000803f8fc275bed8a3e840225c4fbf0000803f8fc2753fb047a94076142e3e0000803f022b17409c994940528f02bf0000803f1e856bbe0052b83da0d623bc0000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &269306987
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,6 +5574,47 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!28 &1276792772
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LightningNotTouchingGround_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 6666e6bec3f5804151b8febf0000803f6666e6be5d8f5641225c0fbf0000803f0000003f4d9d33415171c9bf0000803ffaa911bf3e0a07418ac275be0000803f8fc275bed8a3e840225c4fbf0000803f8fc2753fb047a94076142e3e0000803f022b17409c994940528f02bf0000803f1e856bbe0052b83da0d623bc0000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1400050039
 GameObject:
   m_ObjectHideFlags: 0
@@ -5651,7 +5651,7 @@ ParticleSystem:
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
-  autoRandomSeed: 1
+  autoRandomSeed: 0
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
@@ -9213,7 +9213,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 0
     collisionMode: 0
@@ -9221,7 +9221,7 @@ ParticleSystem:
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    plane0: {fileID: 0}
+    plane0: {fileID: 1772031705}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
     plane3: {fileID: 0}
@@ -10392,7 +10392,7 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_RenderMode: 1
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.01
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
@@ -10427,7 +10427,7 @@ Transform:
   m_Father: {fileID: 34559770}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!28 &1626295125
+--- !u!28 &1621410113
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10647,7 +10647,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 74751625}
+      objectReference: {fileID: 1276792772}
     - target: {fileID: 4993132179246499030, guid: 83678659d44f89d43b2bd23ef32438d6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10680,7 +10680,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1626295125}
+      objectReference: {fileID: 1621410113}
     - target: {fileID: 7809703224646303625, guid: 243becc008d926248a2951b13a275d54,
         type: 3}
       propertyPath: m_LocalPosition.x
