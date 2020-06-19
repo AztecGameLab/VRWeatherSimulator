@@ -122,6 +122,47 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!28 &8721219
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: e17a3841c3f5804151b8febf0000803fe17a38415d8f5641225c0fbf0000803f14ae47414d9d33415171c9bf0000803f759336413e0a07418ac275be0000803f0ad73b41d8a3e840225c4fbf0000803f3d0a4f41b047a94076142e3e0000803fd57865419c994940528f02bf0000803f00003c410052b83da0d623bc0000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &269306987
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,47 +515,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!28 &962353900
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: LightningNotTouchingGround_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 6666e6bec3f5804151b8febf0000803f6666e6be5d8f5641225c0fbf0000803f0000003f4d9d33415171c9bf0000803ffaa911bf3e0a07418ac275be0000803f8fc275bed8a3e840225c4fbf0000803f8fc2753fb047a94076142e3e0000803f022b17409c994940528f02bf0000803f1e856bbe0052b83da0d623bc0000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &999584737
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +629,47 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2966333902050184836}
   m_PrefabAsset: {fileID: 0}
+--- !u!28 &1112761330
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LightningNotTouchingGround_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 6666e6bec3f5804151b8febf0000803f6666e6be5d8f5641225c0fbf0000803f0000003f4d9d33415171c9bf0000803ffaa911bf3e0a07418ac275be0000803f8fc275bed8a3e840225c4fbf0000803f8fc2753fb047a94076142e3e0000803f022b17409c994940528f02bf0000803f1e856bbe0052b83da0d623bc0000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1189912148
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,13 +854,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262413862}
-  m_LocalRotation: {x: 0.106445394, y: -0, z: -0, w: 0.99431854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.51, y: 1.42, z: -0.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 12.221001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1262413866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,47 +892,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!28 &1540303241
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: e17a3841c3f5804151b8febf0000803fe17a38415d8f5641225c0fbf0000803f14ae47414d9d33415171c9bf0000803f759336413e0a07418ac275be0000803f0ad73b41d8a3e840225c4fbf0000803f3d0a4f41b047a94076142e3e0000803fd57865419c994940528f02bf0000803f00003c410052b83da0d623bc0000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1772031704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,13 +1027,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786602340}
-  m_LocalRotation: {x: -0.7174739, y: -0, z: -0, w: 0.69658536}
-  m_LocalPosition: {x: -0.20999998, y: -0.66, z: 11.68}
+  m_LocalRotation: {x: -0.02772313, y: 0.67764336, z: -0.7344226, w: -0.025579812}
+  m_LocalPosition: {x: -0.2, y: 0.16, z: 11.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 875537931}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -91.69299, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 94.60498, y: 184.324, z: -0.000015258789}
 --- !u!65 &1786602342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1079,7 +1079,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 85947ffe4a26a41458fada64061c9d44, type: 2}
+  - {fileID: 2100000, guid: 59326dc3d64ab854c982eaa070eb43c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1179,7 +1179,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 962353900}
+      objectReference: {fileID: 1112761330}
     - target: {fileID: 4993132179246499030, guid: 83678659d44f89d43b2bd23ef32438d6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1207,7 +1207,7 @@ PrefabInstance:
     - target: {fileID: 5638769620320600480, guid: e72ca58469ce7734da3aeff419b448bb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5638769620320600483, guid: e72ca58469ce7734da3aeff419b448bb,
         type: 3}
@@ -1296,7 +1296,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1540303241}
+      objectReference: {fileID: 8721219}
     - target: {fileID: 7809703224646303625, guid: 243becc008d926248a2951b13a275d54,
         type: 3}
       propertyPath: m_LocalPosition.x
