@@ -8,7 +8,7 @@ public class Fog : MonoBehaviour
     void Start()
     {
         RenderSettings.fog = true;
-        RenderSettings.fogDensity = .8f;
+        RenderSettings.fogDensity = .25f;
     }
 
     // Update is called once per frame
