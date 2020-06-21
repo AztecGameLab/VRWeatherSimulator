@@ -7,7 +7,7 @@ public class WeatherController : MonoBehaviour
     public static WeatherController instance;
     AirPocket[] airpockets;
 
-        [Range(0.0f, 1.0f)]
+    [Range(0.0f, 1.0f)]
     public float waterAvailability; //affects water in air
 
     [Range(0.0f, 1.0f)]
@@ -37,7 +37,12 @@ public class WeatherController : MonoBehaviour
     [Range(minTemperature, maxTemperature)]
     public float temperature = 22;
 
+    //ThunderLightning Delay
+    [Range(0.0f , 300.0f)]
+    public float timeInput; //Time from flash to thunder
 
+    [Range(1100.0f, 1200.0f)]
+    public float speedOfSoundInAir;
 
     private void Awake()
     {
@@ -107,5 +112,13 @@ public class WeatherController : MonoBehaviour
         public void SetMountains(float mountains)
     {
         this.mountains = mountains;
+    }
+
+    public void ThunderLightningDelay(float timeInput, float speedOfSoundInAir)
+    {
+        this.timeInput = timeInput;
+        this.speedOfSoundInAir = speedOfSoundInAir;
+
+        float distance = Mathf.Round(timeInput / (5280 / speedOfSoundInAir));
     }
 }
