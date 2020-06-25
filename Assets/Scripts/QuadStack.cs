@@ -52,7 +52,7 @@ public class QuadStack : MonoBehaviour
         quad.Clear();
 
         quad.vertices = new Vector3[] { new Vector3(-dv, 0, -dv), new Vector3(-dv, 0, dv), new Vector3(dv, 0, -dv), new Vector3(dv, 0, dv) };
-        quad.triangles = new int[] { 0, 1, 2, 3, 2, 1 };
+        quad.triangles = new int[] { 2, 1, 0, 1, 2, 3 };
 
         quad.RecalculateNormals();
     }
