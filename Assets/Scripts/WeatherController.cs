@@ -15,25 +15,22 @@ public class WeatherController : MonoBehaviour
 
     [Range(0.0f, 1.0f)]
     public float thunderstorm; //lots of rain in clouds
-
+    
     [Range(0.0f, 1.0f)]
     public float wind; //temperature diffrence
 
     [Range(0.0f, 1.0f)]
     public float windDryness; //air not saturated
-
+    
     [Range(0.0f, 1.0f)]
     public float fog;
 
     [Range(0.0f, 1.0f)] //warm and saturated
     public float clouds;
 
-
+    
     [Range(0.0f, 1.0f)]
-    public float rain; //saturated air
-
-        [Range(0.0f, 1.0f)]
-    public float hail; //high contrast temperature
+    public float rain;
 
     const float minTemperature = -90;
     const float maxTemperature = 60;
@@ -41,7 +38,7 @@ public class WeatherController : MonoBehaviour
     public float temperature = 22;
 
     //ThunderLightning Delay
-    [Range(0.0f, 300.0f)]
+    [Range(0.0f , 300.0f)]
     public float timeInput; //Time from flash to thunder
 
     [Range(1100.0f, 1200.0f)]
@@ -60,7 +57,7 @@ public class WeatherController : MonoBehaviour
 
     void Update()
     {
-        wind = (mountains + Mathf.InverseLerp(0, 150, GetRangeOfTemperatures())) / 2;
+        wind = (mountains + Mathf.InverseLerp(0, 150, GetRangeOfTemperatures()))/2;
         thunderstorm = (rain + clouds) / 2;
         windDryness = 1 - GetAverageSaturation();
         temperature = GetAverageTemperature();
@@ -76,15 +73,15 @@ public class WeatherController : MonoBehaviour
 
         foreach (AirPocket airpocket in airpockets)
         {
-            if (airpocket.temperature < minimum)
+            if(airpocket.temperature < minimum)
                 minimum = airpocket.temperature;
-            if (airpocket.temperature > maximum)
+            if(airpocket.temperature > maximum)
                 maximum = airpocket.temperature;
         }
         return Mathf.Abs(maximum - minimum);
     }
 
-
+    
     float GetAverageSaturation()
     {
         float totalSaturation = 0;
@@ -94,9 +91,9 @@ public class WeatherController : MonoBehaviour
             totalSaturation += airpocket.saturation;
         }
 
-        return totalSaturation / airpockets.Length;
+        return totalSaturation/airpockets.Length;
     }
-
+    
     float GetAverageTemperature()
     {
         float totalTemperature = 0;
@@ -106,7 +103,7 @@ public class WeatherController : MonoBehaviour
             totalTemperature += airpocket.temperature;
         }
 
-        return totalTemperature / airpockets.Length;
+        return totalTemperature/airpockets.Length;
     }
 
     public void SetWaterAvailability(float waterAvailability)
@@ -119,8 +116,11 @@ public class WeatherController : MonoBehaviour
         this.mountains = mountains;
     }
 
-    public float ThunderDelay(float distance)
+    public void ThunderLightningDelay(float timeInput, float speedOfSoundInAir)
     {
-        return distance / 340;
+        this.timeInput = timeInput;
+        this.speedOfSoundInAir = speedOfSoundInAir;
+
+        float distance = Mathf.Round(timeInput / (5280 / speedOfSoundInAir));
     }
 }
