@@ -65,6 +65,8 @@ public class WeatherController : MonoBehaviour
         windDryness = 1 - GetAverageSaturation();
         temperature = GetAverageTemperature();
         clouds = (airpockets[0].clouds + airpockets[1].clouds) / 2;
+        rain = Mathf.InverseLerp(.5f, 1, GetAverageSaturation());
+        hail = wind * Mathf.InverseLerp(.5f, 1, GetAverageSaturation());
     }
 
     float GetRangeOfTemperatures() //gets the largest diffrence between airpockets
