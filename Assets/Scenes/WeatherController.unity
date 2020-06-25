@@ -3081,7 +3081,10 @@ MonoBehaviour:
   fog: 0
   clouds: 0
   rain: 0
+  hail: 0
   temperature: 22
+  timeInput: 0
+  speedOfSoundInAir: 0
 --- !u!4 &1708568897
 Transform:
   m_ObjectHideFlags: 0

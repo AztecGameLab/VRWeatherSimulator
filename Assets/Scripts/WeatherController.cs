@@ -30,7 +30,10 @@ public class WeatherController : MonoBehaviour
 
 
     [Range(0.0f, 1.0f)]
-    public float rain;
+    public float rain; //saturated air
+
+        [Range(0.0f, 1.0f)]
+    public float hail; //high contrast temperature
 
     const float minTemperature = -90;
     const float maxTemperature = 60;
@@ -107,6 +110,11 @@ public class WeatherController : MonoBehaviour
     public void SetWaterAvailability(float waterAvailability)
     {
         this.waterAvailability = waterAvailability;
+    }
+
+        public void SetMountains(float mountains)
+    {
+        this.mountains = mountains;
     }
 
     public float ThunderDelay(float distance)
