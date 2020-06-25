@@ -32,6 +32,9 @@ public class WeatherController : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float rain;
 
+    [Range(0.0f, 1.0f)]
+    public float hail;
+
     const float minTemperature = -90;
     const float maxTemperature = 60;
     [Range(minTemperature, maxTemperature)]
