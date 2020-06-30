@@ -21,23 +21,23 @@ public class NewScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            AudioManager.Instance.PlayMusic(audioClips[1], 1.0f, true);
+            AudioManager.Instance.PlayLoopSource1(audioClips[1], 1.0f, true);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            AudioManager.Instance.StopMusic();
+            //AudioManager.Instance.StopMusic();
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            AudioManager.Instance.PauseMusic();
+            //AudioManager.Instance.PauseMusic();
         }
         if (Input.GetKeyDown(KeyCode.Keypad0))
         {
-            AudioManager.Instance.MusicVol(0f);
+            AudioManager.Instance.LoopSrc1Vol(0f);
         }
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
-            AudioManager.Instance.MusicVol(1.0f);
+            AudioManager.Instance.LoopSrc1Vol(1.0f);
         }
     }
 }
