@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CloudGen
-  m_Shader: {fileID: -6465566751694194690, guid: 50e5822373bb18840bfc736a50975e5a,
+  m_Name: CloudGenFast
+  m_Shader: {fileID: -6465566751694194690, guid: 1f843df09174a6c4dab5c27472b26669,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1b30e935cd9392841a8c65048733c5c4, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -44,8 +44,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2DLOD_78E1C77F_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 1b30e935cd9392841a8c65048733c5c4, type: 3}
+    - _SampleTexture2D_3BECDB96_Texture_1:
+        m_Texture: {fileID: 2800000, guid: f403934ef6ca8c74fb98c72373d36429, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -53,27 +53,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - SpeedMod: 1
-    - Vector1_1E14003F: 10
-    - Vector1_2E573679: 0
-    - Vector1_3A45FE5F: 80
-    - Vector1_632F42BC: 20
-    - Vector1_66F1050D: 0.05
-    - Vector1_7F85BF50: 81.9
-    - Vector1_9B6CD79: 0.01
-    - Vector1_9CFA984D: 0.94
-    - Vector1_AE2C8AE8: 1.02
-    - Vector1_B0621718: 0
-    - Vector1_C7C060E2: 8.36
-    - Vector1_E63BCD91: 0.02
-    - Vector1_F7A8B00E: 0.853
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
-    - _CloudCutoffHigh: 1
-    - _CloudCutoffLow: 0.1
-    - _CloudCutoffMul: 1.1111112
-    - _CloudScale: 0.001
     - _Cull: 2
     - _Cutoff: 0.5
     - _DstBlend: 0
@@ -81,11 +63,8 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HalfQuadHeight: 10
-    - _InvQuadHeight: 0.1
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _QuadBaseY: 20
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
@@ -96,14 +75,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_C6A9F26B: {r: 3.56487, g: 1.474497, b: 0, a: 1}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _CloudColorHigh: {r: 1.2, g: 1.2, b: 1.2, a: 1}
-    - _CloudColorLow: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
---- !u!114 &598495717656944744
+--- !u!114 &3536582016033431866
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
