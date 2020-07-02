@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CloudGenFast
-  m_Shader: {fileID: -6465566751694194690, guid: 1f843df09174a6c4dab5c27472b26669,
+  m_Name: NoiseGenGraph
+  m_Shader: {fileID: -6465566751694194690, guid: a04c3778c67538246b4a50f30b46e5eb,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -44,15 +44,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_3BECDB96_Texture_1:
-        m_Texture: {fileID: 8400000, guid: 014a8aad80c088245b68221089fdad57, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_A3D827F8: 8
+    - Vector1_B83D74DC: 4
+    - Vector1_F8407DEC: 2
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -75,11 +74,12 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Vector3_EA6340F1: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
---- !u!114 &3536582016033431866
+--- !u!114 &2379597562830530341
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
