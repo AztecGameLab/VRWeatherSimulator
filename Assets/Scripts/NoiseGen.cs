@@ -6,6 +6,7 @@ public class NoiseGen : MonoBehaviour
 {
     public Material source;
     public RenderTexture target;
+    public Vector3 scale;
 
     const int gradCount = 256;
 
@@ -31,6 +32,9 @@ public class NoiseGen : MonoBehaviour
             for (int i = 0; i < gradCount; i++)
             {
                 grads[i] = Random.onUnitSphere;
+
+                //~
+                //grads[i] = new Vector3(Mathf.Abs(grads[i].x), Mathf.Abs(grads[i].y), Mathf.Abs(grads[i].z));
             }
         }
 
@@ -81,15 +85,17 @@ public class NoiseGen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        InitNoise();
+        CreateNoise(scale);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Time.time - startTime) > 1.0f)
+        if ((Time.time - startTime) > 100.0f)
         {
             InitNoise();
-            CreateNoise(new Vector3(80.0f, 80.0f, 1f));
+            CreateNoise(scale);
         }
 
     }

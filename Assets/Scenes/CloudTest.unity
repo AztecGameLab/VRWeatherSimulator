@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 1597955024}
   - component: {fileID: 1597955023}
   m_Layer: 0
-  m_Name: CloudStack
+  m_Name: Cloud Stack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stackHeight: 40
   quadSize: 500
-  quadCount: 50
+  quadCount: 500
   camera: {fileID: 1040390214}
   material: {fileID: 2100000, guid: f0c7fb18d6773be478225d2524b95a36, type: 2}
 --- !u!23 &1597955024
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 2037672475}
   - component: {fileID: 2037672478}
   m_Layer: 0
-  m_Name: NoiseTest
+  m_Name: Perlin Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,13 +802,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037672473}
-  m_LocalRotation: {x: -0.5713734, y: 0.02331332, z: -0.012628648, w: 0.82026184}
-  m_LocalPosition: {x: -3.6, y: 11.5, z: -14.55}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalRotation: {x: -0.57865256, y: 0.03996749, z: -0.026130455, w: 0.8141751}
+  m_LocalPosition: {x: -3.6, y: 70, z: 15}
+  m_LocalScale: {x: 80, y: 80, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: -69.51501, y: 8.657001, z: -7.7770004}
+  m_LocalEulerAnglesHint: {x: -70.078, y: 16.246, z: -15.107}
 --- !u!114 &2037672478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,6 +823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 2100000, guid: 6db4d154112b0bc4a916925257d1276e, type: 2}
   target: {fileID: 8400000, guid: 014a8aad80c088245b68221089fdad57, type: 2}
+  scale: {x: 4, y: 8, z: 2}
 --- !u!1 &2125605567
 GameObject:
   m_ObjectHideFlags: 0
