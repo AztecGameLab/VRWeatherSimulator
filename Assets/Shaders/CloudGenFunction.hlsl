@@ -10,8 +10,10 @@ void ProcessCloud_float(float4 Sample, float PosY, float BaseY, float QuadHeight
     y1 = y1 * y1 * y1;
     y1 = lerp(SharpnessRange.x, SharpnessRange.y, y1);
 
-    //float y2 = 1.0f - saturate(abs(y0 + (QuadHeight * 0.5)) / QuadHeight);
-    //y2 = y2 * y2;
+    float y2 = 1.0f - saturate(abs(y0 + (QuadHeight * 0.5)) / QuadHeight);
+    y2 = y2 * y2;
+
+    y2 = 0.6 + y2 * 0.6;
 
     Alpha = saturate((alpha - y1) / (SharpnessRange.y - SharpnessRange.x));
 
@@ -20,6 +22,7 @@ void ProcessCloud_float(float4 Sample, float PosY, float BaseY, float QuadHeight
 
     Alpha = Alpha * 1.0;
     Color = float3(0.6, 0.6, 0.6) * Sample.z + 0.4;
+    Color = Color * y2;
 }
 
 #endif

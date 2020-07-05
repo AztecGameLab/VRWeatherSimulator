@@ -172,7 +172,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 87a84363ceb0fe347bf5f2debf87a0e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,13 +208,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803326026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalRotation: {x: -0.6393009, y: -0, z: -0, w: -0.76895666}
+  m_LocalPosition: {x: 0, y: 7496.521, z: -34.056}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -280.521, y: 0, z: 0}
 --- !u!1 &1040390212
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,13 +292,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040390212}
-  m_LocalRotation: {x: -0.5594571, y: -0, z: -0, w: 0.8288593}
-  m_LocalPosition: {x: 0, y: -40, z: -35}
+  m_LocalRotation: {x: -0.17364825, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 30, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -68.037, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
 --- !u!114 &1040390216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,9 +361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4c90a9578f47148bf3e72cd29bb0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stackHeight: 40
-  quadSize: 500
-  quadCount: 500
+  stackHeight: 20
+  quadSize: 20000
+  quadCount: 100
   camera: {fileID: 1040390214}
   material: {fileID: 2100000, guid: f0c7fb18d6773be478225d2524b95a36, type: 2}
 --- !u!23 &1597955024
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 2037672475}
   - component: {fileID: 2037672478}
   m_Layer: 0
-  m_Name: Perlin Test
+  m_Name: Perlin Noise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,13 +802,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037672473}
-  m_LocalRotation: {x: -0.57865256, y: 0.03996749, z: -0.026130455, w: 0.8141751}
-  m_LocalPosition: {x: -3.6, y: 70, z: 15}
-  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_LocalRotation: {x: -0.63929814, y: 0, z: 0, w: -0.768959}
+  m_LocalPosition: {x: 0, y: 7496.521, z: -34.056}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: -70.078, y: 16.246, z: -15.107}
+  m_LocalEulerAnglesHint: {x: -280.521, y: 0, z: 0}
 --- !u!114 &2037672478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,7 +823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 2100000, guid: 6db4d154112b0bc4a916925257d1276e, type: 2}
   target: {fileID: 8400000, guid: 014a8aad80c088245b68221089fdad57, type: 2}
-  scale: {x: 4, y: 8, z: 2}
+  scale: 1
 --- !u!1 &2125605567
 GameObject:
   m_ObjectHideFlags: 0

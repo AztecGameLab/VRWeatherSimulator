@@ -1,4 +1,4 @@
-﻿Shader "Unlit/noiseGen2"
+﻿Shader "Unlit/noiseGen3"
 {
     Properties
     {
@@ -34,19 +34,12 @@
 
             float4 _Grad[256];
             float4 _Scale;
-            
-            float test(float3 index)
-            {
-                uint idx = index.x % 256;
-                uint idy = index.y % 256;
-                return abs(_Grad[idx].x * _Grad[idy].x);
-            }
 
-            float perlin(float3 index)
+            float perlin3(float3 index)
             {
-                //uint _Count = (uint)_Scale.w;
+                uint _Count = (uint)_Scale.w;
 
-                uint _Count = 256;
+                //uint _Count = 256;
 
                 uint2 bf;
                 uint4 bg;
@@ -130,9 +123,9 @@
             fixed4 frag(v2f i) : SV_Target
             {
                 float j = _Scale.w / 3.0;
-                float r = perlin(float3(i.uv.x * _Scale.x, i.uv.y * _Scale.x , 0.7));
-                float g = perlin(float3(i.uv.x * _Scale.y, i.uv.y * _Scale.y, j + 0.7));
-                float b = perlin(float3(i.uv.x * _Scale.z, i.uv.y * _Scale.z, 1.9 * j + 0.7));
+                float r = perlin3(float3(i.uv.x * _Scale.x, i.uv.y * _Scale.x , 0.7));
+                float g = perlin3(float3(i.uv.x * _Scale.y, i.uv.y * _Scale.y, j + 0.7));
+                float b = perlin3(float3(i.uv.x * _Scale.z, i.uv.y * _Scale.z, 1.9 * j + 0.7));
                 
                // r = test(float3(i.uv.x * 256, i.uv.y * 256, 0));
 
